@@ -28,26 +28,26 @@
 
 
 
-    name: feature-pipeline
+name: feature-pipeline
 
-on: [push]
+    on: [push]
 
-permissions:
-  contents: read
-  statuses: write
-  security-events: read
+    permissions:
+      contents: read
+      statuses: write
+      security-events: read
 
-jobs:
-  feature-pipeline:
-    if: github.ref != 'refs/heads/main'
-    uses: rajasekharburri-git-actions/workflows/.github/workflows/feature-java-pipeline.yaml@main
-    with:
-      project: roboshop
-      component: shipping
-      environment: dev
-    secrets: inherit
+  jobs:
+   feature-pipeline:
+     if: github.ref != 'refs/heads/main'
+     uses: rajasekharburri-git-actions/workflows/.github/workflows/feature-java-pipeline.yaml@main
+     with:
+       project: roboshop
+       component: shipping
+       environment: dev
+      secrets: inherit
 
-  dev-pipeline:
+    dev-pipeline:
     if: github.ref == 'refs/heads/main'
     uses: rajasekharburri-git-actions/workflows/.github/workflows/dev-java-pipeline.yaml@main
     with:
