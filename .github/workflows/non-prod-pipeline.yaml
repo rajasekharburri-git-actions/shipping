@@ -10,13 +10,13 @@ on:
 
       environment:
         description: "Please select environment"
+        required: true
         type: choice
+        default: uat
         options:
           - qa
           - uat
           - sit
-        required: true
-        default: uat
 
 concurrency:
   group: roboshop-shipping-nonprod
