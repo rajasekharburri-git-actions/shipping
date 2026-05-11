@@ -34,6 +34,6 @@ jobs:
     with:
       component: shipping
       version: ${{ inputs.version }}
-      environment: ${{ inputs.environment }}
+      environment: ${{ inputs.environment }} 
 
     secrets: inherit
