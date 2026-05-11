@@ -32,7 +32,7 @@ jobs:
     uses: rajasekharburri-git-actions/workflows/.github/workflows/non-prod-pipeline.yaml@main
 
     with:
-      component: user
+      component: shipping
       version: ${{ inputs.version }}
       environment: ${{ inputs.environment }}
 
